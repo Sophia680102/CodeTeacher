@@ -1,7 +1,7 @@
 import requests 
 import time
 
-API_URL = ""
+API_URL = "https://api-inference.huggingface.co/models/bigcode/starcoder2-7b"
 HF_TOKEN = ""
 
 '''headers는 HTTP 요청에 포함되는 추가 정보(메타데이터)를 담는 딕셔너리. 
