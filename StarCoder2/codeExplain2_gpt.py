@@ -18,7 +18,7 @@ def query_gpt(prompt: str, model: str="gpt-3.5-turbo", temperature: float=0.3)->
         print("OpenAI API 호출 중 오류", e)
         return None
 
-def build_gpt_prompt(code: str, line_comments: str, mode: str) -> str :
+def build_gpt_prompt(code: str, line_comments: str, summary: str, mode: str) -> str :
     '''
     Args:
         code: 사용자가 입력한 코드 (str)
@@ -92,4 +92,4 @@ def build_gpt_prompt(code: str, line_comments: str, mode: str) -> str :
 ※ 설명은 한국어로 작성하고, 전문가 수준의 인사이트를 제공해주세요.
 """
     }
-    return prompt_templetes[mode].strip()
+    return prompt_templates[mode].strip()

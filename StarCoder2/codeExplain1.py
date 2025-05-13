@@ -23,7 +23,7 @@ def query_huggingface(prompt:str, max_new_tokens: int=128, temperature: float=0.
     if response.status_code == 200: # 서버가 요청에 대해 무슨 상태코드를 반환했는지 알려주는 값. 200은 웹에서 "성공"을 의미하는 표준 HTTP 상태 코드드
         return response.json()[0]['generated_text']
     else:
-        print("Error:", response.status_code, response.txt)
+        print("Error:", response.status_code, response.text)
         return None
 
 # 줄별 주석 생성
