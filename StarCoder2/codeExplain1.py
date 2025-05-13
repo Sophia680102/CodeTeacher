@@ -13,8 +13,8 @@ def query_huggingface(prompt:str, max_new_tokens: int=128, temperature: float=0.
     payload = {
         "inputs":prompt, 
         "parameters":{
-            "max_new_tokens":max_new_tokens # 새로 생성할 최대 토큰 수. 너무 작으면 문장이 잘리고 너무 크면 비용 낭비 -> 요약은 256, 설명은 128 정도 적절. 
-            "temperature":temperature # 생성의 무작위성 정도. (0= 완전 결정적, 1 = 매우 다양) 일반적으로 0.2 ~ 0.7 사이에서 많이 조절절
+            "max_new_tokens":max_new_tokens, # 새로 생성할 최대 토큰 수. 너무 작으면 문장이 잘리고 너무 크면 비용 낭비 -> 요약은 256, 설명은 128 정도 적절. 
+            "temperature":temperature, # 생성의 무작위성 정도. (0= 완전 결정적, 1 = 매우 다양) 일반적으로 0.2 ~ 0.7 사이에서 많이 조절절
             "return_full_text":False # 입력 프롬프트까지 포함해서 반환할지 여부
         }
     }
